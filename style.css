@@ -1,0 +1,85 @@
+.body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#searchInput {
+  width: 75%;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.button-wrapper {
+  margin: 10px 0;
+}
+
+#searchButton,
+#clearButton {
+  width: 110px;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 1px 3px 5px lightgrey;
+}
+
+#searchButton {
+  background-color: #464646;
+}
+
+#clearButton {
+  background-color: #cc3838;
+}
+
+.imageList-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imageList-wrapper .card {
+  margin: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 3px 5px 8px grey;
+  width: calc(33.33% - 20px);
+  max-width: 400px; /* İstediğiniz maksimum genişliği belirleyin */
+  max-height: 400px;
+  box-sizing: border-box; /* padding ve border'ı genişlik hesabına dahil etmek için */
+  overflow: hidden; /* Resimlerin kartın dışına taşmasını engellemek için */
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  #searchInput {
+    width: 100%;
+  }
+
+  .imageList-wrapper .card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .imageList-wrapper .card {
+    width: calc(100% - 20px);
+  }
+}
